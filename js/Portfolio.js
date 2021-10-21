@@ -33,7 +33,7 @@ menubtn.addEventListener(`click`,()=>{
 
 // Skills Animation 
 var Skills={
-    ht:86,
+    ht:92,
     js:80,
     cs:90,
     jq:75
@@ -54,7 +54,20 @@ $.each(Skills,  function(key,value){
 })
 
 
+//sections Scrolling Animation  
 
+$("a").click(function () {
+
+    var sectionId = $(this).attr("href");
+  
+    var positionOfSection = $(sectionId).offset().top;
+  
+    $("html , body").animate({
+      scrollTop: positionOfSection
+    }, 1000);
+  
+  })
+  
 
 
 
@@ -86,7 +99,7 @@ menubtn.addEventListener(`click`,()=>{
 
 // Skills Animation 
 var Skills={
-    ht:85,
+    ht:92,
     js:75,
     cs:90,
     jq:70
@@ -111,3 +124,4 @@ window.addEventListener(`scroll`,function(){
     var header = document.querySelector(`header`);
     header.classList.toggle("sticky",window.scrollY > 0 );
 })
+
